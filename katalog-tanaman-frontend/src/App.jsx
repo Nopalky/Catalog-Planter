@@ -105,24 +105,22 @@ export default function App() {
               setSearchQuery={setSearchQuery}
             />
 
-            {/* --- PENANGANAN STATE KONSUMSI API (TUGAS 7) --- */}
-
             {/* 1. STATE LOADING (Indikator Proses Fetch) */}
             {loading && (
               <div className="mx-auto max-w-6xl px-6 py-16 text-center">
                 <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-[#1B3B2B] border-r-transparent"></div>
                 <p className="mt-3 text-sm font-medium text-[#525B44]">
-                  Sedang mengambil katalog tanaman dari server API...
+                  Sedang mengambil katalog tanaman 
                 </p>
               </div>
             )}
 
             {/* 2. STATE ERROR (Pesan Gagal & Tombol Coba Lagi) */}
             {error && !loading && (
-              <div className="mx-auto my-8 max-w-md rounded-2xl border border-red-200 bg-red-50/80 p-6 text-center shadow-xs">
-                <p className="text-sm font-semibold text-red-800">⚠️ {error}</p>
-                <p className="mt-1 text-xs text-red-600">
-                  Pastikan koneksi internet aktif atau endpoint server benar.
+              <div className="mx-auto my-8 max-w-md rounded-2xl border border-[#F5F3EC] bg-[#FFFEF9] p-6 text-center shadow-xs">
+                <p className="text-sm font-semibold text-[#263D31]">{error}</p>
+                <p className="mt-1 text-xs text-[#5E6B5F]">
+                  Pastikan koneksi internet aktif
                 </p>
                 <button
                   onClick={loadInitialPlants}
